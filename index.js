@@ -32,36 +32,65 @@ numbers.forEach((number) => {
 
 
 // 5.
-document.body.innerHTML += "<strong>Suda cisla:</strong>";
+document.body.innerHTML += "<strong>Suda cisla v seznamu jsou:</strong>";
+numbers.forEach((number) => {
+  if (number % 2 === 0) {
+  document.body.innerHTML += `<p>${number}</p>`
+  }
+});
 
 
 // 6.
-document.body.innerHTML += "<strong>Cisla, jejich absolutni hodnota je delitelna tremi:</strong>";
+document.body.innerHTML += "<strong>Cisla, jejichz absolutni hodnota je delitelna tremi:</strong>";
+numbers.forEach((number) => {
+  if (Math.abs(number) % 3 === 0) {
+    document.body.innerHTML += `<p>${number}</p>`
+  }
+});
 
 
 // 7.
-document.body.innerHTML += "<strong>Vzdalenost cisla od cisla pet:</strong>";
+document.body.innerHTML += "<strong>Vzdalenost kazdeho cisla v seznamu od cisla pet:</strong>";
+numbers.forEach((number) => {
+  document.body.innerHTML += `<p>${number - 5}</p>`
+});
 
 
 // 8.
-document.innerHTML += "<strong>Druhe mocniny vzdalenosti vsech cisel od cisla pet:</strong>";
-
+document.body.innerHTML += "<strong>Druhe mocniny vzdalenosti vsech cisel od cisla pet:</strong>";
+numbers.forEach((number) => {
+  const vzdalenost = number - 5;
+  document.body.innerHTML += `<p>${vzdalenost * vzdalenost}</p>`
+});
 
 // 9.
 document.innerHTML += "<strong>Pocet zapornych cisel v seznamu:</strong>";
+numbers.forEach((number) => {
+});
 
 
 // 10.
 document.body.innerHTML += "<strong>Soucet vsech cisel v poli:</strong>";
+let totalNumber = 0;
+
 numbers.forEach((number) => {
-  document.body.innerHTML += `<p></p>`
-}
-);
+  totalNumber = totalNumber + number;
+});
+document.body.innerHTML += `<p>${totalNumber}</p>`
 
 
 // 11.
 document.body.innerHTML += "<strong>Prumer vsech cisel poli:</strong>";
+let average = 0;
+let sum = 0;
 
+numbers.forEach((number) => {
+  sum = sum + number;
+});
+
+average = sum / numbers.length;
+
+document.body.innerHTML += `<p>${average}</p>`;
 
 // 12.
 document.body.innerHTML += "<strong>Soucet vsech kladnych cisel v poli:</strong>";
