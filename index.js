@@ -94,3 +94,12 @@ document.body.innerHTML += `<p>${average}</p>`;
 
 // 12.
 document.body.innerHTML += "<strong>Soucet vsech kladnych cisel v poli:</strong>";
+let sumPositiveNumbers = 0;
+
+numbers.forEach((number) => {
+  if (number > 0) {
+    sumPositiveNumbers = sumPositiveNumbers + number;
+  }
+});
+
+document.body.innerHTML += `<p>${sumPositiveNumbers}</p>`;
